@@ -1,4 +1,4 @@
-<%= form_for(@tester) do |f| %>
+<%= form_for @tester, :validate => true  do |f| %>
   <% if @tester.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tester.errors.count, "error") %> prohibited this tester from being saved:</h2>
