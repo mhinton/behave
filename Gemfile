@@ -26,6 +26,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'capybara'
 
+  gem 'rails-footnotes'
   gem 'irbtools'
   gem 'wirb'
   gem 'hirb'
