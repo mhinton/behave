@@ -1,28 +1,28 @@
 <!DOCTYPE html> 
 <html lang="en"> 
-<head> 
-  <meta charset=utf-8>
-  <title>Behavior Tracker</title> 
-  <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tag %>
-</head>
-<body> 
-  <header>
-    Behave
-  </header> 
-  <nav>
-    <ul>
-      <li>Behavior Tracker</li>
-      <li>Categories</li>
-      <li>Rewards</li>
-    </ul>
-  </nav> 
-  <section id="content"> 
-    <%= yield %>
-  </section> 
-  <footer>
-    <p>A ThinkingState Production</p>
-  </footer> 
-</body> 
+  <head> 
+    <meta charset=utf-8>
+    <title>Behavior Tracker</title> 
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body> 
+    <header>
+      Behave
+    </header> 
+    <nav>
+      <ul>
+        <li><%= link_to "Behavior Tracker", root_path %></li>
+        <li><%= link_to "Categories", root_path %></li>
+        <li><%= link_to "Rewards", root_path %></li>
+      </ul>
+    </nav> 
+    <section id="content"> 
+      <%= yield %>
+    </section> 
+    <footer>
+      <p>A ThinkingState Production</p>
+    </footer> 
+  </body> 
 </html> 

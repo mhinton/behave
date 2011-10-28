@@ -7,7 +7,7 @@ gem 'client_side_validations'
 # gem 'map_by_method'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -29,7 +29,7 @@ group :development, :test do
   gem 'capybara'
 
   gem 'rails-footnotes'
-  gem 'irbtools', '~> 1.1.0.pre'
+  gem 'irbtools', '>= 1.1.0.pre'
   # gem 'wirb'
   # gem 'hirb'
   gem 'itslog'
