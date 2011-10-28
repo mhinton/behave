@@ -1,9 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.1'
 gem 'pg'
 gem 'jquery-rails'
 gem 'client_side_validations'
+# gem 'map_by_method'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -27,9 +29,9 @@ group :development, :test do
   gem 'capybara'
 
   gem 'rails-footnotes'
-  gem 'irbtools'
-  gem 'wirb'
-  gem 'hirb'
+  gem 'irbtools', '~> 1.1.0.pre'
+  # gem 'wirb'
+  # gem 'hirb'
   gem 'itslog'
   gem 'silent-postgres'
 end

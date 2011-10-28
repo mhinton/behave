@@ -42,6 +42,10 @@ module Behave
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
+    # this should save some pain when the json Content-type header sets the charset to blank
+    # see http://wekeroad.com/2011/10/24/a-fun-little-json-murder-mystery-with-ie9 
+    config.action_controller.default_charset = "utf-8"
+
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
