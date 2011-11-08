@@ -33,6 +33,7 @@ GEM
     archive-tar-minitar (0.5.2)
     arel (2.2.1)
     awesome_print (0.4.0)
+    bcrypt-ruby (3.0.1)
     boson (0.3.4)
       alias (>= 0.2.2)
       hirb (>= 0.5.0)
@@ -58,6 +59,10 @@ GEM
     coffee-script-source (1.1.2)
     columnize (0.3.4)
     database_cleaner (0.6.7)
+    devise (1.4.9)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     every_day_irb (1.1.0.pre.3)
@@ -104,6 +109,7 @@ GEM
       thor (~> 0.14)
     json (1.6.1)
     json_pure (1.6.1)
+    kgio (2.6.0)
     linecache19 (0.5.12)
       ruby_core_source (>= 0.1.4)
     looksee (1.0.3)
@@ -117,6 +123,7 @@ GEM
     multi_json (1.0.3)
     nokogiri (1.5.0)
     ori (0.1.0)
+    orm_adapter (0.0.5)
     paint (0.8.3)
     pg (0.11.0)
     polyglot (0.3.2)
@@ -146,6 +153,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
+    raindrops (0.8.0)
     rake (0.9.2.2)
     rdoc (3.11)
       json (~> 1.4)
@@ -205,6 +213,12 @@ GEM
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
     unicode-display_width (0.1.1)
+    unicorn (4.1.1)
+      kgio (~> 2.4)
+      rack
+      raindrops (~> 0.6)
+    warden (1.0.6)
+      rack (>= 1.0)
     wirb (0.4.1)
     xpath (0.1.4)
       nokogiri (~> 1.3)
@@ -218,6 +232,7 @@ DEPENDENCIES
   client_side_validations
   coffee-rails (~> 3.1.0)
   database_cleaner
+  devise (~> 1.4.9)
   factory_girl_rails
   irbtools (>= 1.1.0.pre)
   itslog
@@ -231,3 +246,4 @@ DEPENDENCIES
   shoulda
   silent-postgres
   uglifier
+  unicorn

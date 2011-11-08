@@ -8,8 +8,9 @@
     <%= csrf_meta_tag %>
   </head>
   <body> 
+    <div class="container">
     <header>
-      Behave
+      <!-- Behave -->Header
     </header> 
     <nav>
       <ul>
@@ -18,11 +19,24 @@
         <li><%= link_to "Rewards", root_path %></li>
       </ul>
     </nav> 
+    <div id="messages">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>      
     <section id="content"> 
       <%= yield %>
     </section> 
-    <footer>
-      <p>A ThinkingState Production</p>
+    <footer class="row show-grid">
+      <div class="span-one-third">
+        A ThinkingState Production<br />
+      </div>
+      <div class="span-one-third">
+        A ThinkingState Production<br />
+      </div>
+      <div class="span-one-third">
+        A ThinkingState Production<br />
+      </div>
     </footer> 
+  </div>
   </body> 
 </html> 

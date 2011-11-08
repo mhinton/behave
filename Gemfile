@@ -4,6 +4,7 @@ gem 'rails', '3.1.1'
 gem 'pg'
 gem 'jquery-rails'
 gem 'client_side_validations'
+gem 'devise', '~> 1.4.9'
 # gem 'map_by_method'
 
 # Use unicorn as the web server
