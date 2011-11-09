@@ -1,30 +1,39 @@
-<h2 class="offset5">Sign in</h2>
+<div class="row">
+  <div class="offset6">
+    <h2>Sign in</h2>
+  </div>
+</div>
+
 
 <div class="row">
   <div class="offset5">
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-stacked'}) do |f| %>
-  <div class="clearfix">
-    <%= f.label :email %>
-    <div class="input span5">
-      <%= f.email_field :email %>
-    </div>
-  </div><br />
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-stacked'}) do |f| %>
+      <fieldset>
+        <div class="clearfix">
+          <%= f.label :email %>
+          <div class="input span5">
+            <%= f.email_field :email %>
+          </div>
+        </div><br />
 
-  <div class="clearfix">
-    <%= f.label :password %>
-    <div class="input span5">
-      <%= f.password_field :password %>
-    </div>
+        <div class="clearfix">
+          <%= f.label :password %>
+          <div class="input span5">
+            <%= f.password_field :password %>
+          </div>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="clearfix">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me, :style => "display: inline;" %>
+          </div>
+        <% end -%>
+
+        <div><%= f.submit "Sign in", :class => "btn primary" %></div>
+      </fieldset>
+    <% end %>
+
+    <%= render :partial => "devise/shared/links" %>
   </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="clearfix">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me, :style => "display: inline;" %>
-    </div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in", :class => "btn primary" %></div>
-<% end %>
-
-<%= render :partial => "devise/shared/links" %>
+</div>
