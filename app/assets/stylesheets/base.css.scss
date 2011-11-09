@@ -7,6 +7,12 @@ header {
   font-weight: bold;
   text-align: center;
   padding: 1em;
+    #user_nav {
+      width: 400px;
+      margin-left: auto;
+      float: right;
+      font-size: 14pt;
+    }
 }
 
 nav {
@@ -42,7 +48,10 @@ nav {
 /* } */
 
 footer {
-  padding: 1em 0 1em 0;
+  padding: 0;
+  margin: 0;
+  height: 30px;
+  line-height: 1.4em;
   background-color: #888888;
   color: #eee;
 }

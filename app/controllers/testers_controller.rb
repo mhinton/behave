@@ -1,4 +1,6 @@
 class TestersController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /testers
   # GET /testers.json
   def index
