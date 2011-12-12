@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.1.3'
 gem 'pg'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 1.0.19'
 gem 'client_side_validations'
 gem 'devise', '~> 1.4.9'
 # gem 'map_by_method'
@@ -21,6 +21,11 @@ group :assets do
   gem 'uglifier'
 end
 
+group :development do
+  gem 'rails-footnotes'
+  gem 'bullet'
+end
+
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'database_cleaner'
@@ -29,10 +34,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'capybara'
 
-  gem 'rails-footnotes'
-  gem 'irbtools', '>= 1.1.0.pre'
-  # gem 'wirb'
-  # gem 'hirb'
+  gem 'irbtools'
   gem 'itslog'
   gem 'silent-postgres'
 end
