@@ -1,4 +1,6 @@
 Behave::Application.routes.draw do
+  resources :children
+
   devise_for :users
 
   resources :testers
