@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 gem 'pg'
+gem 'rein' # foreign keys for mysql/postgres https://github.com/nullobject/rein
 gem 'jquery-rails', '~> 1.0.19'
 gem 'client_side_validations'
 gem 'devise', '~> 1.4.9'
@@ -23,7 +24,7 @@ end
 
 group :development do
   gem 'rails-footnotes'
-  gem 'bullet'
+  gem 'bullet' # kill N+1 queries https://github.com/flyerhzm/bullet
 end
 
 group :development, :test do
@@ -35,6 +36,6 @@ group :development, :test do
   gem 'capybara'
 
   gem 'irbtools'
-  gem 'itslog'
-  gem 'silent-postgres'
+  gem 'itslog' # colorize log output
+  gem 'silent-postgres' # remove postgres cruft from logs
 end
