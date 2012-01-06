@@ -35,7 +35,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'capybara'
 
-  gem 'irbtools'
+  gem 'irbtools', :require => 'irbtools/configure'
   gem 'itslog' # colorize log output
   gem 'silent-postgres' # remove postgres cruft from logs
 end
