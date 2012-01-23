@@ -4,6 +4,8 @@ gem 'rails', '3.1.3'
 gem 'pg'
 gem 'rein' # foreign keys for mysql/postgres https://github.com/nullobject/rein
 gem 'jquery-rails', '~> 1.0.19'
+gem 'bootstrap-sass', '~> 1.4.2'
+gem 'tabulous'
 gem 'client_side_validations'
 gem 'devise', '~> 1.4.9'
 # gem 'map_by_method'
@@ -35,7 +37,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'capybara'
 
-  gem 'irbtools', :require => 'irbtools/configure'
+  gem 'irbtools', :require => false
   gem 'itslog' # colorize log output
   gem 'silent-postgres' # remove postgres cruft from logs
 end
