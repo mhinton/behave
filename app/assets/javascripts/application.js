@@ -8,4 +8,3 @@
 //= require jquery_ujs
 //= require rails.validations
 //= require_tree .
-//= require_tree ../../../vendor/assets/stylesheets/sass-twitter-bootstrap/js

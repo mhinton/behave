@@ -1,52 +1,47 @@
 <!DOCTYPE html> 
 <html lang="en"> 
-  <head> 
-    <meta charset=utf-8>
-    <title>Behavior Tracker</title> 
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tag %>
-  </head>
-  <body> 
-    <div class="container">
-    <header>
-      <!-- Behave -->Header
-      <div id="user_nav">
-        <% if user_signed_in? %>
-          <%= current_user.email %> | 
-          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-        <% else %>
-          <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-        <% end %>
+<head> 
+  <meta charset=utf-8>
+  <title>Behavior Tracker</title> 
+
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
+</head>
+<body> 
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="container-fluid">
+        <a class="brand" href="#">Behavior Tracker</a>
+        <%= tabs %>
       </div>
-    </header> 
-    <nav>
-      <ul>
-        <li><%= link_to "Behavior Tracker", root_path %></li>
-        <li><%= link_to "Categories", root_path %></li>
-        <li><%= link_to "Rewards", root_path %></li>
-      </ul>
-    </nav> 
+    </div>
+  </div>
+
+  <div class="container">
+
     <div id="messages">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </div>      
+
     <section id="content"> 
       <%= yield %>
     </section> 
+
     <footer>
-    <div class="row show-grid" title="Default three column layout">
-      <div class="span4 offset1">
-        A ThinkingState Production
+      <div class="row show-grid" title="Default three column layout">
+        <div class="span4 offset1">
+          A Flatland Lab Production
+        </div>
+        <div class="span4 offset1">
+          A Flatland Lab Production
+        </div>
+        <div class="span4 offset1">
+          A Flatland Lab Production
+        </div>
       </div>
-      <div class="span4 offset1">
-        A ThinkingState Production
-      </div>
-      <div class="span4 offset1">
-        A ThinkingState Production
-      </div>
-    </div>
     </footer> 
   </div>
-  </body> 
+</body> 
 </html> 

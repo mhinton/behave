@@ -25,7 +25,7 @@ end
 
 group :development do
   gem 'rails-footnotes'
-  gem 'bullet' # kill N+1 queries https://github.com/flyerhzm/bullet
+  #gem 'bullet' # kill N+1 queries https://github.com/flyerhzm/bullet
 end
 
 group :development, :test do
