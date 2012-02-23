@@ -9,6 +9,15 @@ gem 'tabulous'
 gem 'client_side_validations'
 gem 'devise'
 
+# for file uploads and resizing
+# http://www.engineyard.com/blog/2011/a-gentle-introduction-to-carrierwave/
+gem 'carrierwave'
+gem 'rmagick'
+
+# pagination gem
+# https://github.com/amatsuda/kaminari
+gem 'kaminari'
+
 # Use unicorn as the web server
 gem 'unicorn'
 
@@ -29,14 +38,29 @@ group :development do
 end
 
 group :development, :test do
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  # gem 'ruby-debug19', :require => 'ruby-debug'
+
+  # pry related gems
+  gem 'pry-rails'
+  gem 'pry-doc'
+  gem 'pry-nav'
+  gem 'pry-stack_explorer'
+  gem 'pry-remote'
+  gem 'plymouth'  # add require 'plymouth' to test file to debug
+
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'shoulda'
-  gem 'capybara'
 
   gem 'irbtools', :require => false
   gem 'itslog' # colorize log output
   gem 'silent-postgres' # remove postgres cruft from logs
+end
+
+group :test do
+  gem 'timecop' # https://github.com/jtrupiano/timecop
+  gem 'database_cleaner'
+  gem 'shoulda'
+  # gem 'capybara'
 end
