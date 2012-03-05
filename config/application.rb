@@ -53,7 +53,7 @@ module Behave
     config.assets.enabled = true
 
     # forcing your application to not access the DB or load models when precompiling your assets
-    # config.assets.initialize_on_precompile = false
+    config.assets.initialize_on_precompile = false
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
@@ -63,7 +63,7 @@ module Behave
       # Don't generate specs for views or helpers
       g.view_specs false
       g.helper_specs false
-      g.fixture_replacement :factory_girl
+      g.fixture_replacement :fabrication
     end
 
   end

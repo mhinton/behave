@@ -5,6 +5,8 @@ gem 'pg'
 gem 'rein' # foreign keys for mysql/postgres https://github.com/nullobject/rein
 gem 'jquery-rails'
 gem 'bootstrap-sass'
+gem 'simple_form', '~> 2.0'
+gem 'country_select'
 gem 'tabulous'
 gem 'client_side_validations'
 gem 'devise'
@@ -38,6 +40,7 @@ group :development do
 end
 
 group :development, :test do
+  # broken in 1.9.3
   # gem 'ruby-debug19', :require => 'ruby-debug'
 
   # pry related gems
@@ -46,10 +49,10 @@ group :development, :test do
   gem 'pry-nav'
   gem 'pry-stack_explorer'
   gem 'pry-remote'
-  gem 'plymouth'  # add require 'plymouth' to test file to debug
+  #gem 'plymouth'  # add require 'plymouth' to test file to debug
 
-  gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  # gem 'factory_girl_rails'
+  gem 'fabrication' # http://fabricationgem.org/
   gem 'rspec-rails'
   gem 'shoulda'
 
@@ -59,8 +62,16 @@ group :development, :test do
 end
 
 group :test do
+  gem 'shoulda'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'poltergeist'
   gem 'timecop' # https://github.com/jtrupiano/timecop
   gem 'database_cleaner'
-  gem 'shoulda'
-  # gem 'capybara'
+  gem 'faker'
+
+  # generate test coverage reports
+  # run using $ COVERAGE=on rake spec
+  gem 'simplecov', :require => false
+  gem 'simplecov-rcov', :require => false
 end

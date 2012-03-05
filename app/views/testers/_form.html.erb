@@ -1,21 +1,11 @@
-<%= form_for @tester, :validate => true  do |f| %>
-  <% if @tester.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@tester.errors.count, "error") %> prohibited this tester from being saved:</h2>
+<%= simple_form_for(@tester, :html => {:class => 'form-horizontal' }) do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% @tester.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-inputs">
+    <%= f.input :name, :input_html => { :class => "span6" }, :hint => "Tester Name" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
   </div>
 <% end %>
