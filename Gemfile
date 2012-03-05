@@ -4,7 +4,7 @@ gem 'rails', '~> 3.2.0'
 gem 'pg'
 gem 'rein' # foreign keys for mysql/postgres https://github.com/nullobject/rein
 gem 'jquery-rails'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 2.0.1'
 gem 'simple_form', '~> 2.0'
 gem 'country_select'
 gem 'tabulous'
