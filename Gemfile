@@ -52,21 +52,21 @@ group :development, :test do
   #gem 'plymouth'  # add require 'plymouth' to test file to debug
 
   # gem 'factory_girl_rails'
-  gem 'fabrication' # http://fabricationgem.org/
+  gem 'fabrication'               # http://fabricationgem.org/
   gem 'rspec-rails'
   gem 'shoulda'
 
   gem 'irbtools', :require => false
-  gem 'itslog' # colorize log output
-  gem 'silent-postgres' # remove postgres cruft from logs
+  gem 'itslog'                    # colorize log output
+  gem 'silent-postgres'           # remove postgres cruft from logs
 end
 
 group :test do
   gem 'shoulda'
   gem 'cucumber-rails'
-  gem 'capybara'
-  gem 'poltergeist'
-  gem 'timecop' # https://github.com/jtrupiano/timecop
+  gem 'capybara'                  # https://github.com/jnicklas/capybara
+  gem 'poltergeist'               # https://github.com/jonleighton/poltergeist
+  gem 'timecop'                   # https://github.com/jtrupiano/timecop
   gem 'database_cleaner'
   gem 'faker'
 
