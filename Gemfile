@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'bundler', '~> 1.1.0'
 gem 'rails', '~> 3.2.0'
 gem 'pg'
 gem 'rein' # foreign keys for mysql/postgres https://github.com/nullobject/rein

@@ -1,32 +1,17 @@
-<div class="row">
-  <div class="offset6">
-    <h2>Sign up</h2>
+<h2>Sign up</h2>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :email, :required => true, :autofocus => true %>
+    <%= f.input :password, :required => true %>
+    <%= f.input :password_confirmation, :required => true %>
   </div>
-</div>
 
-<div class="row">
-  <div class="offset5">
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-stacked'}) do |f| %>
-      <fieldset>
-        <%= devise_error_messages! %>
-
-        <div class="clearfix"><%= f.label :email %>
-          <div class="input span5"><%= f.email_field :email %></div>
-        </div>
-
-        <div class="clearfix"><%= f.label :password %>
-          <div class="input span5"><%= f.password_field :password %></div>
-        </div>
-
-        <div class="clearfix"><%= f.label :password_confirmation %>
-          <div class="input span5"><%= f.password_field :password_confirmation %></div>
-        </div>
-        <div>
-          <%= f.submit "Sign up", :class => "btn primary" %>
-        </div>
-      </fieldset>
-    <% end %>
-    <%= render :partial => "devise/shared/links" %>
+  <div class="actions">
+    <%= f.button :submit, "Sign up" %>
   </div>
-</div>
+<% end %>
 
+<%= render "links" %>

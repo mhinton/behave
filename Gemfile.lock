@@ -283,6 +283,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass (~> 2.0.1)
+  bundler (~> 1.1.0)
   capybara
   carrierwave
   client_side_validations

@@ -57,9 +57,9 @@ Tabulous.setup do |config|
       #--------------------------------------------------------------------------------------------------#
       #    TAB NAME         |    DISPLAY TEXT    |    PATH             |    VISIBLE?    |    ENABLED?    #
       #--------------------------------------------------------------------------------------------------#
-      [    :children_tab    ,    'Children'      ,    children_path    ,    true        ,    true        ],
-      [    :testers_tab     ,    'Testers'       ,    testers_path     ,    true        ,    true        ],
       [    :home_tab        ,    'Home'          ,    root_path        ,    true        ,    true        ],
+      [    :testers_tab     ,    'Testers'       ,    testers_path     ,    true        ,    true        ],
+      [    :children_tab    ,    'Children'      ,    children_path    ,    true        ,    true        ],
       #--------------------------------------------------------------------------------------------------#
       #    TAB NAME         |    DISPLAY TEXT    |    PATH             |    VISIBLE?    |    ENABLED?    #
       #--------------------------------------------------------------------------------------------------#
@@ -146,4 +146,8 @@ Tabulous.setup do |config|
   # config.css.inactive_tab_color = '#aaa'
   # config.css.inactive_text_color = '#888'
 
+  # bootstrap support
+  config.tabs_ul_class = "nav nav-pills" # or whatever Bootstrap class you want
+  config.bootstrap_style_subtabs = true
+  config.active_tab_clickable = true
 end
