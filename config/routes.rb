@@ -1,9 +1,8 @@
 Behave::Application.routes.draw do
-  resources :children
-
   devise_for :users
 
   resources :testers
+  resources :children
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
