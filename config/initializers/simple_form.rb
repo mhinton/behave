@@ -79,6 +79,14 @@ SimpleForm.setup do |config|
     end
   end
 
+  # this block came from https://github.com/plataformatec/simple_form/issues/424#issuecomment-4001247
+  # this fixed the labels on checkboxes being messed up
+  config.wrappers :checkbox, :tag => 'div', :class => 'control-group', :error_class => 'error' do |b|
+    b.use :tag => 'div', :class => 'controls' do |ba|
+      ba.use :label_input
+    end
+  end
+
   # Wrappers for forms and inputs using the Twitter Bootstrap toolkit.
   # Check the Bootstrap docs (http://twitter.github.com/bootstrap)
   # to learn about the different styles for forms and inputs,
