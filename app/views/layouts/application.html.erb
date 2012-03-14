@@ -21,13 +21,6 @@
         <a class="brand" href="#">BT</a>
         <div class="nav-collapse">
           <%= tabs %>
-          <!--
-          <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          -->
 
           <p class="navbar-text pull-right">
             <% if user_signed_in? %>
@@ -38,20 +31,21 @@
               <%= link_to "Sign in", new_user_session_path %>
             <% end -%>
           </p>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </div>
   </div>
 
   <div class="container master-container">
 
-    <% unless flash.empty? %>
-      <div id="messages">
-        <% flash.each do |key, msg| %>
-          <p id="#{notice_key}" class="#{key}"><%= msg %></p>
-        <% end -%>
-      </div>
-    <% end -%>
+    <% [:notice, :error, :alert].each do |level| %>
+      <% unless flash[level].blank? %>
+        <div class="alert <%= flash_class(level) %>">
+          <a class="close" data-dismiss="alert">×</a>
+          <%= flash[level] %>
+        </div>
+      <% end %>
+    <% end %>
 
     <section id="content"> 
       <%= yield %>
@@ -59,13 +53,13 @@
 
     <footer>
       <div class="row show-grid" title="Default three column layout">
-        <div class="span4 offset1">
+        <div class="span4">
           A Flatland Lab Production
         </div>
-        <div class="span4 offset1">
+        <div class="span4">
           A Flatland Lab Production
         </div>
-        <div class="span4 offset1">
+        <div class="span4">
           A Flatland Lab Production
         </div>
       </div>
