@@ -55,7 +55,6 @@ group :development, :test do
   # gem 'factory_girl_rails'
   gem 'fabrication'               # http://fabricationgem.org/
   gem 'rspec-rails'
-  gem 'shoulda'
 
   gem 'irbtools', :require => false
   gem 'itslog'                    # colorize log output
