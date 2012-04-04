@@ -1,25 +1,22 @@
-/* this file was application.css */
-/* I am overriding bootstrap-scss with the unity bootswatch css file from
- * http://bootswatch.com.
- * To use the default bootstrap remove the require bootswatch line and
- * uncomment the import bootstrap line.
- */
 /*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require bootswatch
 */
-// @import 'bootstrap';
+// First import bootswatch variables
+@import "bootswatch/spacelab/variables";
 
-@import url("./base.css.scss");
-@import url("./testers.css.scss");
+@import "bootstrap";
 
-body {
-  padding-top: 60px;
-}
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
 
-footer {
-  margin-top: 40px;
-}
+// Responsive styles if you want them
+@import "bootstrap-responsive";
+
+// Import the bootswatch style
+@import "bootswatch/spacelab/bootswatch";
+
+@import "base";
+@import "testers";

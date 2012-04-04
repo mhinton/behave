@@ -1,11 +1,12 @@
 source 'http://rubygems.org'
 
 gem 'bundler', '~> 1.1.0'
-gem 'rails', '~> 3.2.0'
+gem 'rails', '~> 3.2.3'
 gem 'pg'
 gem 'rein' # foreign keys for mysql/postgres https://github.com/nullobject/rein
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 2.0.1'
+gem 'bootswatch-rails'
 gem 'simple_form', '~> 2.0'
 gem 'country_select'
 gem 'tabulous'
@@ -41,8 +42,7 @@ group :development do
 end
 
 group :development, :test do
-  # broken in 1.9.3
-  # gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'debugger' # New ruby 1.9.2/1.9.3 debugger gem  https://github.com/cldwalker/debugger
 
   # pry related gems
   gem 'pry-rails'
