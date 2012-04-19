@@ -15,8 +15,8 @@ gem 'devise'
 
 # for file uploads and resizing
 # http://www.engineyard.com/blog/2011/a-gentle-introduction-to-carrierwave/
-gem 'carrierwave'
-gem 'rmagick'
+# gem 'carrierwave'
+# gem 'rmagick'
 
 # pagination gem
 # https://github.com/amatsuda/kaminari
@@ -37,6 +37,7 @@ group :assets do
 end
 
 group :development do
+  gem 'quiet_assets' # don't show the asset pipeline messages in the dev log
   gem 'rails-footnotes'
   #gem 'bullet' # kill N+1 queries https://github.com/flyerhzm/bullet
 end
@@ -52,7 +53,7 @@ group :development, :test do
   gem 'pry-remote'
   #gem 'plymouth'  # add require 'plymouth' to test file to debug
 
-  # gem 'factory_girl_rails'
+  #gem 'factory_girl_rails'
   gem 'fabrication'               # http://fabricationgem.org/
   gem 'rspec-rails'
 
@@ -72,6 +73,6 @@ group :test do
 
   # generate test coverage reports
   # run using $ COVERAGE=on rake spec
-  gem 'simplecov', :require => false
-  gem 'simplecov-rcov', :require => false
+  # gem 'simplecov', :require => false
+  # gem 'simplecov-rcov', :require => false
 end

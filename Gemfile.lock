@@ -28,6 +28,7 @@ GEM
     activesupport (3.2.3)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    addressable (2.2.7)
     arel (3.0.2)
     awesome_print (1.0.2)
     bcrypt-ruby (3.0.1)
@@ -44,21 +45,18 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    carrierwave (0.6.1)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
     childprocess (0.3.1)
       ffi (~> 1.0.6)
     client_side_validations (3.1.4)
     clipboard (1.0.1)
-    coderay (1.0.5)
+    coderay (1.0.6)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.2.0)
+    coffee-script-source (1.3.1)
     colored (1.2)
     columnize (0.3.6)
     country_select (0.0.2)
@@ -73,13 +71,13 @@ GEM
       cucumber (>= 1.1.8)
       nokogiri (>= 1.5.0)
     database_cleaner (0.7.2)
-    debugger (1.0.0)
+    debugger (1.1.1)
       columnize (>= 0.3.1)
-      debugger-linecache
-      debugger-ruby_core_source
-    debugger-linecache (1.0.1)
-      debugger-ruby_core_source
-    debugger-ruby_core_source (1.0.1)
+      debugger-linecache (~> 1.1)
+      debugger-ruby_core_source (~> 1.1)
+    debugger-linecache (1.1.1)
+      debugger-ruby_core_source (>= 1.1.1)
+    debugger-ruby_core_source (1.1.1)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -97,7 +95,7 @@ GEM
     fancy_irb (0.7.2)
       paint (>= 0.8.1)
       unicode-display_width (>= 0.1.1)
-    faye-websocket (0.4.4)
+    faye-websocket (0.4.5)
       eventmachine (>= 0.12.0)
     ffi (1.0.11)
     g (1.6.0)
@@ -139,6 +137,8 @@ GEM
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
     kgio (2.7.4)
+    libwebsocket (0.1.3)
+      addressable
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -147,13 +147,13 @@ GEM
     method_source (0.7.1)
     methodfinder (1.2.5)
     mime-types (1.18)
-    multi_json (1.2.0)
+    multi_json (1.3.2)
     nokogiri (1.5.2)
     ori (0.1.0)
     orm_adapter (0.0.7)
     paint (0.8.4)
     pg (0.13.2)
-    poltergeist (0.5.0)
+    poltergeist (0.6.0)
       capybara (~> 1.0)
       childprocess (~> 0.3)
       faye-websocket (~> 0.4, >= 0.4.4)
@@ -177,6 +177,8 @@ GEM
     pry-stack_explorer (0.4.1)
       binding_of_caller (~> 0.6.2)
       pry (~> 0.9.8.2)
+    quiet_assets (1.0.0)
+      rails (~> 3.1)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -192,7 +194,7 @@ GEM
       activesupport (= 3.2.3)
       bundler (~> 1.0)
       railties (= 3.2.3)
-    rails-footnotes (3.7.6)
+    rails-footnotes (3.7.8)
       rails (>= 3.0.0)
     railties (3.2.3)
       actionpack (= 3.2.3)
@@ -207,7 +209,6 @@ GEM
       json (~> 1.4)
     rein (0.8.1)
       activerecord
-    rmagick (2.13.1)
     rspec (2.9.0)
       rspec-core (~> 2.9.0)
       rspec-expectations (~> 2.9.0)
@@ -222,15 +223,16 @@ GEM
       railties (>= 3.0)
       rspec (~> 2.9.0)
     ruby_gntp (0.3.4)
-    rubyzip (0.9.6.1)
+    rubyzip (0.9.7)
     sass (3.1.15)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    selenium-webdriver (2.20.0)
+    selenium-webdriver (2.21.2)
       childprocess (>= 0.2.5)
       ffi (~> 1.0)
+      libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
     shoulda (3.0.1)
@@ -242,12 +244,6 @@ GEM
     simple_form (2.0.1)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    simplecov (0.6.1)
-      multi_json (~> 1.0)
-      simplecov-html (~> 0.5.3)
-    simplecov-html (0.5.3)
-    simplecov-rcov (0.2.3)
-      simplecov (>= 0.4.1)
     sketches (0.1.1)
     slop (2.4.4)
     spoon (0.0.1)
@@ -265,12 +261,12 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.32)
+    tzinfo (0.3.33)
     uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
     unicode-display_width (0.1.1)
-    unicorn (4.2.1)
+    unicorn (4.3.0)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
@@ -290,7 +286,6 @@ DEPENDENCIES
   bootswatch-rails
   bundler (~> 1.1.0)
   capybara
-  carrierwave
   client_side_validations
   coffee-rails (~> 3.2.1)
   country_select
@@ -311,17 +306,15 @@ DEPENDENCIES
   pry-rails
   pry-remote
   pry-stack_explorer
+  quiet_assets
   rails (~> 3.2.3)
   rails-footnotes
   rein
-  rmagick
   rspec-rails
   sass-rails (~> 3.2.3)
   shoulda
   silent-postgres
   simple_form (~> 2.0)
-  simplecov
-  simplecov-rcov
   tabulous
   timecop
   uglifier (>= 1.0.3)
