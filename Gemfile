@@ -23,7 +23,11 @@ gem 'devise'
 gem 'kaminari'
 
 # Use unicorn as the web server
-gem 'unicorn'
+#gem 'unicorn'
+
+# Use PUMA as the web server
+# run with bundle exec puma
+gem 'puma'
 
 # Deploy with Capistrano
 # gem 'capistrano'
