@@ -71,7 +71,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'capybara'                  # https://github.com/jnicklas/capybara
   gem 'poltergeist'               # https://github.com/jonleighton/poltergeist
-  gem 'timecop'                   # https://github.com/jtrupiano/timecop
+  #gem 'timecop'                   # https://github.com/jtrupiano/timecop
   gem 'database_cleaner'
   gem 'faker'
 
