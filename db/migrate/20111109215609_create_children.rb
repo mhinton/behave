@@ -2,7 +2,7 @@ class CreateChildren < ActiveRecord::Migration
   def change
     create_table :children do |t|
       t.string :name
-      t.user :references
+      t.references :user
 
       t.timestamps
     end

@@ -57,8 +57,8 @@ group :development, :test do
   gem 'pry-remote'
   #gem 'plymouth'  # add require 'plymouth' to test file to debug
 
-  #gem 'factory_girl_rails'
-  gem 'fabrication'               # http://fabricationgem.org/
+  gem 'factory_girl_rails', '~> 3.2.0'
+  #gem 'fabrication'               # http://fabricationgem.org/
   gem 'rspec-rails'
 
   gem 'irbtools', :require => false
