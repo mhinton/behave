@@ -1,5 +1,8 @@
 require File.expand_path('../boot', __FILE__)
 
+# setup custom configuration
+require_relative "../lib/custom/railtie" 
+
 # Pick the frameworks you want:
 require "active_record/railtie"
 require "action_controller/railtie"
@@ -23,6 +26,11 @@ module Behave
 
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
+
+    # custom configuration setting example
+    # this value can be accessed via Behave::Application.config.custom.setting_name
+    # or Rails.application.config.custom.setting_name 
+    config.custom.setting_name = 42
 
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
