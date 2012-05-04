@@ -13,6 +13,7 @@ describe Tester do
     it { should_not be_valid }
     specify { @tester.save.should == false }
   end
+
   context "when name not empty" do
     before { @tester.name = 'FirstName LastName' }
     it { should be_valid }

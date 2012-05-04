@@ -53,14 +53,13 @@ group :development, :test do
 
   # pry related gems
   gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'pry-nav'
+  #gem 'pry-doc'
   gem 'pry-stack_explorer'
   gem 'pry-remote'
   #gem 'plymouth'  # add require 'plymouth' to test file to debug
+  gem 'pry-nav'
 
   gem 'factory_girl_rails', '~> 3.2.0'
-  #gem 'fabrication'               # http://fabricationgem.org/
   gem 'rspec-rails'
 
   gem 'irbtools', :require => false
