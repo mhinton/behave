@@ -45,6 +45,7 @@ group :development do
   gem 'rails-footnotes'
   #gem 'bullet' # kill N+1 queries https://github.com/flyerhzm/bullet
   gem 'brakeman'                   # Twitter's security scanner http://brakemanscanner.org/docs/
+  # gem 'seed_dump'                  # https://github.com/rhalff/seed_dump Rails 3 task to dump (parts) of your database to db/seeds.rb
 end
 
 group :development, :test do
