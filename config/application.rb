@@ -57,6 +57,13 @@ module Behave
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password, :password_confirmation]
 
+    # Give each request an identifier in the log
+    config.log_tags = [ :uuid ]
+    # Another example
+    # somewhere in the middleware stack...
+    # request.env['yourapp.someid'] = "1337"
+    # config.log_tags = [ -> request { request.env['yourapp.someid'] } ]
+
     # Enable the asset pipeline
     config.assets.enabled = true
 
