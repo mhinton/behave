@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'bundler', '~> 1.1.0'
 gem 'rails', '~> 3.2.3'
-gem 'pg'
+gem 'pg', '~> 0.13'
 gem 'rein' # foreign keys for mysql/postgres https://github.com/nullobject/rein
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 2.0.1'
@@ -11,7 +11,7 @@ gem 'simple_form', '~> 2.0'
 gem 'country_select'
 gem 'tabulous'
 gem 'client_side_validations'
-gem 'devise'
+gem 'devise', '~> 2.1.0'
 
 # for file uploads and resizing
 # http://www.engineyard.com/blog/2011/a-gentle-introduction-to-carrierwave/
@@ -46,6 +46,7 @@ group :development do
   #gem 'bullet' # kill N+1 queries https://github.com/flyerhzm/bullet
   gem 'brakeman'                   # Twitter's security scanner http://brakemanscanner.org/docs/
   # gem 'seed_dump'                  # https://github.com/rhalff/seed_dump Rails 3 task to dump (parts) of your database to db/seeds.rb
+  gem 'sextant', "~> 0.1.1" # view the route table in dev mode at http://localhost:3000/rails/routes
 end
 
 group :development, :test do
