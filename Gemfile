@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'bundler', '~> 1.1.0'
-gem 'rails', '~> 3.2.3'
+gem 'rails', '~> 3.2.5'
 gem 'pg', '~> 0.13'
 gem 'rein' # foreign keys for mysql/postgres https://github.com/nullobject/rein
 gem 'jquery-rails'
@@ -12,6 +12,7 @@ gem 'country_select'
 gem 'tabulous'
 gem 'client_side_validations'
 gem 'devise', '~> 2.1.0'
+gem 'display_case', '~> 0.0.3'  # implementation of the Exhibit pattern https://github.com/objects-on-rails/display-case
 
 # for file uploads and resizing
 # http://www.engineyard.com/blog/2011/a-gentle-introduction-to-carrierwave/
