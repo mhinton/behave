@@ -55,7 +55,7 @@ group :development, :test do
 
   # pry related gems
   gem 'pry-rails'
-  #gem 'pry-doc'
+  gem 'pry-doc'
   gem 'pry-stack_explorer'
   gem 'pry-remote'
   #gem 'plymouth'  # add require 'plymouth' to test file to debug
