@@ -164,8 +164,12 @@ GEM
     method_source (0.7.1)
     methodfinder (1.2.5)
     mime-types (1.18)
+    mina (0.1.1)
+      open4
+      rake
     multi_json (1.3.6)
     nokogiri (1.5.2)
+    open4 (1.3.0)
     ori (0.1.0)
     orm_adapter (0.0.7)
     paint (0.8.4)
@@ -323,6 +327,7 @@ DEPENDENCIES
   itslog
   jquery-rails
   kaminari
+  mina
   pg (~> 0.13)
   poltergeist
   pry-doc

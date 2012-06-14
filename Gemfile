@@ -32,6 +32,8 @@ gem 'puma'
 
 # Deploy with Capistrano
 # gem 'capistrano'
+# Deploy with Mina
+gem 'mina'  # http://nadarei.co/mina/
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -42,16 +44,16 @@ group :assets do
 end
 
 group :development do
-  gem 'quiet_assets' # don't show the asset pipeline messages in the dev log
+  gem 'quiet_assets'  # don't show the asset pipeline messages in the dev log
   gem 'rails-footnotes'
-  #gem 'bullet' # kill N+1 queries https://github.com/flyerhzm/bullet
-  gem 'brakeman'                   # Twitter's security scanner http://brakemanscanner.org/docs/
-  # gem 'seed_dump'                  # https://github.com/rhalff/seed_dump Rails 3 task to dump (parts) of your database to db/seeds.rb
-  gem 'sextant', "~> 0.1.1" # view the route table in dev mode at http://localhost:3000/rails/routes
+  #gem 'bullet'  # kill N+1 queries https://github.com/flyerhzm/bullet
+  gem 'brakeman'  # Twitter's security scanner http://brakemanscanner.org/docs/
+  # gem 'seed_dump'  # https://github.com/rhalff/seed_dump Rails 3 task to dump (parts) of your database to db/seeds.rb
+  gem 'sextant', "~> 0.1.1"  # view the route table in dev mode at http://localhost:3000/rails/routes
 end
 
 group :development, :test do
-  gem 'debugger' # New ruby 1.9.2/1.9.3 debugger gem  https://github.com/cldwalker/debugger
+  gem 'debugger'  # New ruby 1.9.2/1.9.3 debugger gem  https://github.com/cldwalker/debugger
 
   # pry related gems
   gem 'pry-rails'
@@ -74,7 +76,6 @@ group :test do
   gem 'cucumber-rails'
   gem 'capybara'                  # https://github.com/jnicklas/capybara
   gem 'poltergeist'               # https://github.com/jonleighton/poltergeist
-  #gem 'timecop'                   # https://github.com/jtrupiano/timecop
   gem 'database_cleaner'
   gem 'faker'
 
