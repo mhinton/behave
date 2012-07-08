@@ -56,6 +56,7 @@ group :development, :test do
   gem 'debugger'  # New ruby 1.9.2/1.9.3 debugger gem  https://github.com/cldwalker/debugger
 
   # pry related gems
+  gem 'awesome_print'
   gem 'pry-rails'
   gem 'pry-doc'
   gem 'pry-stack_explorer'
