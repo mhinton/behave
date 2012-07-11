@@ -308,6 +308,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bootstrap-sass (~> 2.0.1)
   bootswatch-rails
   brakeman
