@@ -45,7 +45,8 @@ end
 
 group :development do
   gem 'quiet_assets'  # don't show the asset pipeline messages in the dev log
-  gem 'rails-footnotes'
+  gem 'rack-mini-profiler'
+  #gem 'rails-footnotes'
   #gem 'bullet'  # kill N+1 queries https://github.com/flyerhzm/bullet
   gem 'brakeman'  # Twitter's security scanner http://brakemanscanner.org/docs/
   # gem 'seed_dump'  # https://github.com/rhalff/seed_dump Rails 3 task to dump (parts) of your database to db/seeds.rb
