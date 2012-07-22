@@ -266,10 +266,6 @@ GEM
     sextant (0.1.1)
       activesupport (>= 3.2)
       rails (>= 3.2)
-    shoulda (3.0.1)
-      shoulda-context (~> 1.0.0)
-      shoulda-matchers (~> 1.0.0)
-    shoulda-context (1.0.0)
     shoulda-matchers (1.0.0)
     silent-postgres (0.1.1)
     simple_form (2.0.2)
@@ -344,7 +340,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.3)
   sextant (~> 0.1.1)
-  shoulda
+  shoulda-matchers
   silent-postgres
   simple_form (~> 2.0)
   tabulous

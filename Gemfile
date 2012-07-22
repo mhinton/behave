@@ -67,6 +67,7 @@ group :development, :test do
 
   gem 'factory_girl_rails', '~> 3.2.0'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
 
   gem 'irbtools', :require => false
   gem 'itslog'                    # colorize log output
@@ -74,7 +75,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'shoulda'
   gem 'cucumber-rails'
   gem 'capybara'                  # https://github.com/jnicklas/capybara
   gem 'poltergeist'               # https://github.com/jonleighton/poltergeist
