@@ -57,13 +57,10 @@ group :development, :test do
   gem 'debugger'  # New ruby 1.9.2/1.9.3 debugger gem  https://github.com/cldwalker/debugger
 
   # pry related gems
-  gem 'awesome_print'
+  gem 'jazz_hands' # pry and pry extensions (pry, pry-doc, pry-git, pry-stack_explorer, pry-remote, pry-debugger, hirb, coolline, awesome_print)
   gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'pry-stack_explorer'
-  gem 'pry-remote'
   #gem 'plymouth'  # add require 'plymouth' to test file to debug
-  gem 'pry-nav'
+  #gem 'pry-nav'
 
   gem 'factory_girl_rails', '~> 3.2.0'
   gem 'rspec-rails'
