@@ -1,42 +1,32 @@
 class TestersController < ApplicationController
   before_filter :authenticate_user!
+  respond_to :html, :json
 
   # GET /testers
   # GET /testers.json
   def index
     @testers = Tester.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @testers }
-    end
+    respond_with @testers
   end
 
   # GET /testers/1
   # GET /testers/1.json
   def show
     @tester = Tester.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @tester }
-    end
+    respond_with @tester
   end
 
   # GET /testers/new
   # GET /testers/new.json
   def new
     @tester = Tester.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @tester }
-    end
+    respond_with @tester
   end
 
   # GET /testers/1/edit
   def edit
     @tester = Tester.find(params[:id])
+    respond_with @tester
   end
 
   # POST /testers
@@ -44,7 +34,7 @@ class TestersController < ApplicationController
   def create
     @tester = Tester.new(params[:tester])
 
-    respond_to do |format|
+    respond_with(@tester) do |format|
       if @tester.save
         format.html { redirect_to @tester, notice: 'Tester was successfully created.' }
         format.json { render json: @tester, status: :created, location: @tester }
@@ -60,7 +50,7 @@ class TestersController < ApplicationController
   def update
     @tester = Tester.find(params[:id])
 
-    respond_to do |format|
+    respond_with(@tester) do |format|
       if @tester.update_attributes(params[:tester])
         format.html { redirect_to @tester, notice: 'Tester was successfully updated.' }
         format.json { head :ok }
@@ -77,7 +67,7 @@ class TestersController < ApplicationController
     @tester = Tester.find(params[:id])
     @tester.destroy
 
-    respond_to do |format|
+    respond_with(@tester) do |format|
       format.html { redirect_to testers_url }
       format.json { head :ok }
     end

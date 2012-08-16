@@ -58,6 +58,7 @@ group :development, :test do
 
   # pry related gems
   gem 'jazz_hands' # pry and pry extensions (pry, pry-doc, pry-git, pry-stack_explorer, pry-remote, pry-debugger, hirb, coolline, awesome_print)
+  #gem 'pry-rescue' # https://github.com/ConradIrwin/pry-capture  gem is being renamed pry-rescue but isn't available yet
   gem 'pry-rails'
   #gem 'plymouth'  # add require 'plymouth' to test file to debug
   #gem 'pry-nav'
