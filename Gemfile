@@ -4,6 +4,7 @@ gem 'bundler', '~> 1.1.0'
 gem 'rails', '~> 3.2.5'
 gem 'pg', '~> 0.13'
 gem 'rein' # foreign keys for mysql/postgres https://github.com/nullobject/rein
+#gem 'pg_power' # foreign keys and schema support for postgres https://github.com/TMXCredit/pg_power
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 2.0.1'
 gem 'bootswatch-rails'
